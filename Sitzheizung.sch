@@ -233,12 +233,12 @@ Connection ~ 8900 4300
 $Comp
 L Device:R R2
 U 1 1 5B3BDC61
-P 3450 2650
-F 0 "R2" H 3520 2696 50  0000 L CNN
-F 1 "R" H 3520 2605 50  0000 L CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 3380 2650 50  0001 C CNN
-F 3 "~" H 3450 2650 50  0001 C CNN
-	1    3450 2650
+P 3200 3850
+F 0 "R2" H 3270 3896 50  0000 L CNN
+F 1 "R" H 3270 3805 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 3130 3850 50  0001 C CNN
+F 3 "~" H 3200 3850 50  0001 C CNN
+	1    3200 3850
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -252,8 +252,6 @@ F 3 "~" H 3450 4300 50  0001 C CNN
 	1    3450 4300
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	3450 2800 3450 3200
 $Comp
 L power:GND #PWR03
 U 1 1 5B3BE1DB
@@ -275,33 +273,20 @@ Wire Wire Line
 	5050 3600 5250 3600
 Wire Wire Line
 	5050 3400 5050 2150
-Wire Wire Line
-	5050 2150 3450 2150
-Wire Wire Line
-	3450 2150 3450 2500
 Connection ~ 5050 3400
 $Comp
 L Device:R_POT RV1
 U 1 1 5B3BF5CE
-P 2750 2600
-F 0 "RV1" H 2680 2646 50  0000 R CNN
-F 1 "15k" H 2680 2555 50  0000 R CNN
-F 2 "Potentiometer_THT:Potentiometer_Bourns_3386X_Horizontal" H 2750 2600 50  0001 C CNN
-F 3 "~" H 2750 2600 50  0001 C CNN
-	1    2750 2600
+P 2750 3900
+F 0 "RV1" H 2680 3946 50  0000 R CNN
+F 1 "15k" H 2680 3855 50  0000 R CNN
+F 2 "Potentiometer_THT:Potentiometer_Bourns_3386X_Horizontal" H 2750 3900 50  0001 C CNN
+F 3 "~" H 2750 3900 50  0001 C CNN
+	1    2750 3900
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	2750 2450 2750 2150
-Wire Wire Line
-	2750 2150 3450 2150
-Connection ~ 3450 2150
-Wire Wire Line
-	2750 2750 2750 2900
-Wire Wire Line
-	2750 3650 2550 3650
-Wire Wire Line
-	2550 3850 2750 3850
+	2750 4050 2750 4200
 $Comp
 L power:GND #PWR01
 U 1 1 5B3C40C2
@@ -313,25 +298,18 @@ F 3 "" H 2750 4500 50  0001 C CNN
 	1    2750 4500
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	2750 3850 2750 4500
-Wire Wire Line
-	2750 3200 3450 3200
-Connection ~ 2750 3200
-Wire Wire Line
-	2750 3200 2750 3650
 Connection ~ 3450 3200
 Wire Wire Line
 	3450 3200 3450 4150
 Wire Wire Line
-	2900 2600 3000 2600
+	2900 3900 3000 3900
 Wire Wire Line
-	3000 2600 3000 2900
+	3000 3900 3000 4200
 Wire Wire Line
-	3000 2900 2750 2900
-Connection ~ 2750 2900
+	3000 4200 2750 4200
+Connection ~ 2750 4200
 Wire Wire Line
-	2750 2900 2750 3200
+	2750 4200 2750 4350
 Wire Wire Line
 	5250 3700 3950 3700
 Wire Wire Line
@@ -458,9 +436,9 @@ Text GLabel 9650 3350 2    50   Input ~ 0
 Heizung-
 Text GLabel 9700 4300 2    50   Input ~ 0
 KL31
-Text GLabel 2550 3650 0    50   Output ~ 0
+Text GLabel 2600 2150 0    50   Output ~ 0
 Poti_1
-Text GLabel 2550 3850 0    50   Input ~ 0
+Text GLabel 2600 3200 0    50   Input ~ 0
 Poti_2
 Text GLabel 1400 3050 2    50   Output ~ 0
 KL15
@@ -541,4 +519,25 @@ F 3 "~" H 5750 1600 50  0001 C CNN
 	1    5750 1600
 	1    0    0    -1  
 $EndComp
+Wire Wire Line
+	2600 3200 2750 3200
+Wire Wire Line
+	2750 3200 2750 3750
+Connection ~ 2750 3200
+Wire Wire Line
+	2750 3200 3200 3200
+Wire Wire Line
+	2600 2150 5050 2150
+Wire Wire Line
+	3200 3700 3200 3200
+Connection ~ 3200 3200
+Wire Wire Line
+	3200 3200 3450 3200
+Wire Wire Line
+	3200 4000 3200 4350
+Wire Wire Line
+	3200 4350 2750 4350
+Connection ~ 2750 4350
+Wire Wire Line
+	2750 4350 2750 4500
 $EndSCHEMATC
